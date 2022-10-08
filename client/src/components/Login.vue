@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <center><div>
     <h1>User Login</h1>
     <form v-on:submit.prevent="onLogin">
       <p>Username: <input type="text" v-model="email" /></p>
@@ -7,7 +7,7 @@
       <p><button type="submit">Login</button></p>
       <div class="error" v-if="error">{{error}}</div>
     </form>
-  </div>
+  </div></center>
 </template>
 <script>
 import AuthenService from "@/services/AuthenService";

@@ -1,5 +1,5 @@
 module.exports = ( sequelize, DataTypes ) => {
-    const sty = sequelize.define('sty', {
+    const nike = sequelize.define('nike', {
         name: DataTypes.STRING,
         price: DataTypes.STRING,
         pictures: DataTypes.STRING,
@@ -7,5 +7,5 @@ module.exports = ( sequelize, DataTypes ) => {
         category: DataTypes.STRING,
         status: DataTypes.STRING,
     })
-    return sty
+    return nike
 }

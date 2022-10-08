@@ -2,9 +2,9 @@ const UserController = require('./controllers/UserController.js');
 const UserAuthenController = require('./controllers/UserAuthenController');
 const isAuthenController = require('./authen/isAuthenController')
 const BlogController = require('./controllers/BlogController');
-const styController = require('./controllers/styController');
+const nikeController = require('./controllers/nikeController');
 const Blog = require('./models/Blog.js');
-const sty = require('./models/sty.js');
+const nike = require('./models/nike.js');
 
 let multer = require("multer")
 
@@ -36,15 +36,15 @@ module.exports = (app) => {
     app.get('/blog/:blogId', BlogController.show)
     app.get('/blogs', BlogController.index)
 
-    app.post('/sty', styController.create)
-    app.put('/sty/:styId', styController.put)
-    app.delete('/sty/:styId', styController.remove)
-    app.get('/sty/:styId', styController.show)
-    app.get('/sty', styController.index)
+    app.post('/nike', nikeController.create)
+    app.put('/nike/:nikeId', nikeController.put)
+    app.delete('/nike/:nikeId', nikeController.remove)
+    app.get('/nike/:nikeId', nikeController.show)
+    app.get('/nike', nikeController.index)
 
     app.post('/upload', function (req, res) {
         upload(req, res, function (err) {
-            // isUserAuthenistyed,
+            // isUserAutheninikeed,
             if (err) {
                 return res.end("Error uploading file.")
             }
