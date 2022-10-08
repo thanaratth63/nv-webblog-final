@@ -22,39 +22,7 @@
 </div>
 
 </body>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="1.jpg" target="_blank">
-			<img src = "@/assets/1.png" style="width:75%">
 
-          <div class="caption">
-            <p>1</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="2.jpg" target="_blank">
-          <img src="@/assets/2.png"  style="width:75%">
-          <div class="caption">
-            <p>2</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="3.jpg" target="_blank">
-          <img src="@/assets/3.png"  style="width:75%">
-          <div class="caption">
-            <p>3</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
 </center>
 </template>
 
