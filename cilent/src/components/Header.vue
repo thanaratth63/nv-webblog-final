@@ -8,8 +8,12 @@
           <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
     </head>
-  <div class="container">
-  <div class="row">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="">GUCCI</a>
+    </div>
     <div class="col">
       <router-link :to="{ name: 'blogs' }" class="btn btn-dark" > Home </router-link>
     </div>
@@ -26,9 +30,7 @@
       <a v-on:click.prevent="logout" href="blogs" class="btn btn-dark"> Logout </a>
     </div>
   </div>
-</div>
-
-
+</nav>
 </div>
 
 </template>
@@ -50,35 +52,7 @@ export default {
 
 <style scoped>
 
-.nv-navbar {
-  background-color: #f6c8c8;
-  width: 220px;
-  height: 10px;
-}
-.nv-navbar .nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  float: left;
-}
-.nv-navbar .nav li {
-  float: left;
-}
-.nv-navbar .nav li a {
-  padding: 10px;
-  text-decoration: none;
-  color: #8fb4c5;
-  font-weight: bold;
-}
-.nv-navbar .nav li a:hover {
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-}
-.nv-navbar .nav li a.router-link-active {
-  background-color: #eb8d7a;
-  color: black;
-}
+
 .clearfix {
   clear: left;
 }

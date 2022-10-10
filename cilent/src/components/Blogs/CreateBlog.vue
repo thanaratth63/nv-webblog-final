@@ -3,15 +3,15 @@
 
     <h1> Add Product </h1>
     <form v-on:submit.prevent="createBlog">
-      <p>Name: <input type="text" v-model="blog.title" /></p>
+      <p class="fs-4 text">Name: <input type="text" v-model="blog.title" /></p>
       <transition name="fade">
 		    <div class="thumbnail-pic" v-if="blog.thumbnail != 'null'">
 			    <img :src="BASE_URL + blog.thumbnail" alt="thumbnail" />
 		    </div>
 	    </transition>
-      <p>Detail: <input type="text" v-model="blog.category" /></p>
-      <p>Price: <input type="text" v-model="blog.status" /></p>
-      <p><strong> Select Image :</strong></p>
+      <p class="fs-4 text">Detail: <input type="text" v-model="blog.category" /></p>
+      <p class="fs-4 text">Price: <input type="text" v-model="blog.status" /></p>
+      <p class="fs-4 text"><strong> Select Image :</strong></p>
       <form enctype="multipart/form-data" novalidate>
         <div class="dropbox">
           <input
@@ -42,13 +42,13 @@
               />
               <button v-on:click.prevent="delFile(picture)" class="btn btn-dark">Delete Image</button>
 			        <button v-on:click.prevent="useThumbnail(picture.name)" class="btn btn-dark">Reduce image size</button>
-             <div class="highlight"><h5><p>**Click on the picture and drag it down to the bottom box.**</p></h5></div>
+             <div class="highlight"><h5><p class="fs-4 text">**Click on the picture and drag it down to the bottom box.**</p></h5></div>
             </li>
           </ul>
           <div class="clearfix"></div>
         </div>
       </form>
-      <p>
+      <p class="fs-4 text">
         <vue-ckeditor
           v-model.lazy="blog.content"
           :config="config"
@@ -56,7 +56,7 @@
           @focus="onFocus($event)"
         />
       </p>
-      <p><button type="submit" class="btn-default">OK</button>
+      <p class="fs-4 text"><button type="submit" class="btn btn-dark">OK</button>
       <button v-on:click="navigateTo('/comments')" class="btn btn-dark"> BACK </button></p>
     </form>
   </div>
@@ -387,42 +387,7 @@ ul.pictures li img {
   color: rgb(239, 116, 116);
 }
 .push_right{
-    margin-top: -270px;
-    margin-left: 470px;
+    margin-top: 100px;
+    margin-left: 20px;
 }
-.nv-navbar {
-  background-color: #DCDCDC;
-  width: 100%;
-  padding: 10px 0px 10px 0px;
-}
-.nv-navbar .nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  float: left;
-}
-.nv-navbar .nav li {
-  float: left;
-}
-.nv-navbar .nav li a {
-  padding: 10px;
-  text-decoration: none;
-  color: #778890;
-  font-weight: bold;
-}
-.nv-navbar .nav li a:hover {
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-}
-.nv-navbar .nav li a.router-link-active {
-  background-color: #708090;
-  color: black;
-}
-.clearfix {
-  clear: left;
-}
-.btn-default {
-      box-shadow: 1px 2px 5px #000000;   
-  }
 </style>

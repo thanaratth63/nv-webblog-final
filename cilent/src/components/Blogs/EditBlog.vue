@@ -2,11 +2,11 @@
 	<div class="push_right">
 		<h1>Edit </h1>
 		<form v-on:submit.prevent="editBlog">
-			<p>Name : <input type="text" v-model="blog.title" /></p>
-            <p>Detail : <input type="text" v-model="blog.category" /></p>
-            <p>Price : <input type="text" v-model="blog.status" /></p>
-			<p><strong> Image :</strong></p>
-			<p>
+			<p class="fs-4 text">Name : <input type="text" v-model="blog.title" /></p>
+            <p class="fs-4 text">Detail : <input type="text" v-model="blog.category" /></p>
+            <p class="fs-4 text">Price : <input type="text" v-model="blog.status" /></p>
+			<p class="fs-4 text"><strong> Image :</strong></p>
+			<p class="fs-4 text">
 			    <vue-ckeditor
 					v-model.lazy="blog.content"
 					:config="config"
@@ -14,7 +14,7 @@
 					@focus="onFocus($event)"
 				/>
 			</p>
-			<p>
+			<p class="fs-4 text">
 				<button type="submit" class="btn btn-dark">OK</button>
 				<button v-on:click="navigateTo('/blogs')" class="btn btn-dark">BACK</button>
 			</p>
@@ -184,8 +184,8 @@ export default {
 
 <style scoped>
 .push_right{
-    margin-top: -270px;
-    margin-left: 470px;
+    margin-top: 100px;
+    margin-left: 20px;
 }
 
 </style>

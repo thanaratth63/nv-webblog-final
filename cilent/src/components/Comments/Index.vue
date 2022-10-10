@@ -1,12 +1,12 @@
 <template>
-    <div v-if="users.length">
+    <center><div v-if="users.length">
         <div  class = "push_right">
-            <h2> Add Product</h2>
-            <!-- <p><button v-on:click="logout"> Logout </button></p> -->
+            <h1> Add Product</h1>
+            <br>
             <h4><p><button v-on:click="navigateTo('/blog/create')" class="btn btn-dark"> Add </button></p></h4>
             <div v-for="blog in blogs" v-bind:key="blog.id"></div>       
         </div>
-    </div>
+    </div></center>
 </template>
 
 <script>
@@ -89,37 +89,8 @@ export default {
 
 <style scoped>
 .push_right{
-    margin-top: -270px;
-    margin-left: 470px;
-}
-.nv-navbar {
-  background-color: #DCDCDC;
-  width: 100%;
-  padding: 10px 0px 10px 0px;
-}
-.nv-navbar .nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  float: left;
-}
-.nv-navbar .nav li {
-  float: left;
-}
-.nv-navbar .nav li a {
-  padding: 10px;
-  text-decoration: none;
-  color: #778890;
-  font-weight: bold;
-}
-.nv-navbar .nav li a:hover {
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-}
-.nv-navbar .nav li a.router-link-active {
-  background-color: #708090;
-  color: black;
+    margin-top: 100px;
+    margin-left: 20px;
 }
 .clearfix {
   clear: left;

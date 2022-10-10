@@ -2,12 +2,12 @@
 	<div class="push_right">
 		<h1>Detail  {{ blog.title }} </h1>
 		<form v-on:submit.prevent="editBlog">
-		    <p>Name: {{ blog.title }}</p>
-		    <p>Detail: {{ blog.category }}</p>
-		    <p>Price: {{ blog.status }} </p>
-            <p>Image: </p>
+		    <p class="fs-4 text">Name : {{ blog.title }}</p>
+		    <p class="fs-4 text">Detail : {{ blog.category }}</p>
+		    <p class="fs-4 text">Price : {{ blog.status }} </p>
+            <p class="fs-4 text">More Ddtail : {{ blog.comment }}</p>
 	
-				<div class="blog-pic">
+				<div class="blog-pic" >
 					<transition name="fade"> 
         				<div class="thumbnail-pic" v-if="blog.thumbnail != 'null'">
         				  <img :src="BASE_URL+blog.thumbnail" alt="thumbnail">
@@ -16,13 +16,16 @@
 				</div>
 				<br>
 			  	<br>
-				  <br>
+				<br>
 			  	<br>
-				  <br>
+				<br>
 			  	<br>
-				  <br>
+				<br>
 			  	<br>
-		    <p>
+				<br>
+			  	<br>
+				<br>
+		    <p class="fs-4 text">
 			  <button v-on:click="navigateTo('/blog/edit/' + blog.id)" class="btn btn-dark">Edit</button>
 			  <button v-on:click="deleteBlog(blog)" class="btn btn-dark"> Delete </button>
 			  <button v-on:click="navigateTo('/blogs')" class="btn btn-dark">Back</button>
@@ -231,37 +234,8 @@ export default {
 <style scoped>
 
 .push_right{
-    margin-top: -270px;
-    margin-left: 470px;
-}
-.nv-navbar {
-  background-color: #DCDCDC;
-  width: 100%;
-  padding: 10px 0px 10px 0px;
-}
-.nv-navbar .nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  float: left;
-}
-.nv-navbar .nav li {
-  float: left;
-}
-.nv-navbar .nav li a {
-  padding: 10px;
-  text-decoration: none;
-  color: #778890;
-  font-weight: bold;
-}
-.nv-navbar .nav li a:hover {
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-}
-.nv-navbar .nav li a.router-link-active {
-  background-color: #708090;
-  color: black;
+    margin-top: 100px;
+    margin-left: 20px;
 }
 .clearfix {
   clear: left;

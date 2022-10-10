@@ -2,19 +2,19 @@
 <div class="push_right">
     <h1>Edit</h1>
     <form v-on:submit.prevent = "editUser">
-        <p>Name : <input type="text" v-model="user.name"></p>
-        <p>Lastname : <input type="text" v-model="user.lastname"></p>
-        <p>Email : <input type="text" v-model="user.email"></p>
-        <p>Password : <input type="text" v-model="user.password"></p>
-        <p><button type="submit" class="btn btn-dark">OK</button>
+        <p class="fs-4 text">Name : <input type="text" v-model="user.name"></p>
+        <p class="fs-4 text">Lastname : <input type="text" v-model="user.lastname"></p>
+        <p class="fs-4 text">Email : <input type="text" v-model="user.email"></p>
+        <p class="fs-4 text">Password : <input type="text" v-model="user.password"></p>
+        <p class="fs-4 text"><button type="submit" class="btn btn-dark">OK</button>
         <button v-on:click="navigateTo('/users')" class="btn btn-dark"> BACK</button> </p>
     </form>
     <hr>
     <div>
-        <p>Name : {{user.name}}</p>
-        <p>Lastname : {{user.lastname}}</p>
-        <p>Email : {{user.email}}</p>
-        <p>Password : {{user.password}}</p>
+        <p class="fs-4 text">Name : {{user.name}}</p>
+        <p class="fs-4 text">Lastname : {{user.lastname}}</p>
+        <p class="fs-4 text">Email : {{user.email}}</p>
+        <p class="fs-4 text">Password : {{user.password}}</p>
     </div>
 </div>
 </template>
@@ -61,8 +61,8 @@ export default {
 
 <style scoped>
 .push_right{
-    margin-top: -270px;
-    margin-left: 470px;
+    margin-top: 100px;
+    margin-left: 20px;
 }
 .nv-navbar {
   background-color: #DCDCDC;

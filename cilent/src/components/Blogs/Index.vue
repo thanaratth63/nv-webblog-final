@@ -1,27 +1,29 @@
 <template>
     <div class = "push_right">
-        <h2> All Product </h2>
-        <!-- <p><button v-on:click="logout"> Logout </button></p> -->
-        <h4> Has {{blogs.length}} product  </h4>
-        <div v-if="blogs.length === 0" class="empty-blog">
+        <h1> All Product </h1>
+        <!-- <p class="fs-4 text"><button v-on:click="logout"> Logout </button></p> -->
+        <h3> Has {{blogs.length}} product  </h3>
+        <div v-if="blogs.length === 0" class="empty-blog" >
          No have product
         </div>
+        <br>
         <div v-for="blog in blogs" v-bind:key="blog.id">
-            <p>Name: {{ blog.title }} </p>
-            <p>Detail: {{ blog.category }} </p>
-            <p>Price: {{ blog.status }}</p>
+            <p class="fs-4 text"> Name: {{ blog.title }} </p>
+            <p class="fs-4 text">Detail: {{ blog.category }} </p>
+            <p class="fs-4 text">Price: {{ blog.status }}</p>
             <div class="blog-list">
+                <div class="push_right1">
 				<div class="blog-pic">
 					<transition name="fade"> 
-        				<div class="thumbnail-pic" v-if="blog.thumbnail != 'null'">
+        				<div class="thumbnail-pic"  v-if="blog.thumbnail != 'null'">
         				  <img :src="BASE_URL+blog.thumbnail" alt="thumbnail" width="200">
         				</div>
       				</transition>
+                </div>
 				</div>
 			</div>
-            <br>
-            <p>
-              <button v-on:click="navigateTo('/blog/'+ blog.id)" class="btn btn-dark"> See more </button> 
+            <p class="fs-4 text">
+              <button v-on:click="navigateTo('/blog/'+ blog.id)" class="btn btn-dark" > See more </button> 
             </p>
             <hr>
         </div>
@@ -102,37 +104,12 @@ export default {
 <style scoped>
 
 .push_right{
-    margin-top: -270px;
-    margin-left: 470px;
+    margin-top: 100px;
+    margin-left: 20px;
 }
-.nv-navbar {
-  background-color: #DCDCDC;
-  width: 100%;
-  padding: 10px 0px 10px 0px;
-}
-.nv-navbar .nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  float: left;
-}
-.nv-navbar .nav li {
-  float: left;
-}
-.nv-navbar .nav li a {
-  padding: 10px;
-  text-decoration: none;
-  color: #778890;
-  font-weight: bold;
-}
-.nv-navbar .nav li a:hover {
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-}
-.nv-navbar .nav li a.router-link-active {
-  background-color: #708090;
-  color: black;
+.push_right1{
+    margin-top: -100px;
+    margin-left: 600px;
 }
 .clearfix {
   clear: left;
@@ -142,7 +119,7 @@ export default {
  height: 200%;
  text-align: center;
  padding:10px;
- background:darksalmon;
- color:white;
+ background:rgb(223, 185, 251);
+ color:rgb(0, 0, 0);
 }
 </style>

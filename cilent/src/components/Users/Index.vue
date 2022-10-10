@@ -3,13 +3,13 @@
     <div v-if="users.length">
         <h1>Admin</h1>
         <h4>Number of users {{users.length}}</h4>
-        <p><button v-on:click="navigateTo('/user/create')" class="btn-default">Add</button></p>
+        <p class="fs-4 text"><button v-on:click="navigateTo('/user/create')" class="btn btn-dark">Add</button></p>
         <div v-for="user in users" v-bind:key="user.id">
-            <p>Name : {{user.name}} </p>
-            <p>Lastname : {{user.lastname}}</p>
-            <p>
-                <button v-on:click="navigateTo('/user/'+user.id)" class="btn-default">Show more</button>
-                <button v-on:click="deleteUser(user)" class="btn-default">Delete</button>
+            <p class="fs-4 text">Name : {{user.name}} </p>
+            <p class="fs-4 text">Lastname : {{user.lastname}}</p>
+            <p class="fs-4 text">
+                <button v-on:click="navigateTo('/user/'+user.id)" class="btn btn-dark">Show more</button>
+                <button v-on:click="deleteUser(user)" class="btn btn-dark">Delete</button>
             </p>
             <hr>
         </div>
@@ -69,8 +69,8 @@ export default {
 
 <style scoped>
 .push_right{
-    margin-top: -270px;
-    margin-left: 470px;
+    margin-top: 80px;
+    margin-left: 20px;
 }
 .nv-navbar {
   background-color: #DCDCDC;
@@ -104,7 +104,7 @@ export default {
 .clearfix {
   clear: left;
 }
-.btn-default {
+.btn btn-dark {
       box-shadow: 1px 2px 5px #000000;   
   }
 </style>

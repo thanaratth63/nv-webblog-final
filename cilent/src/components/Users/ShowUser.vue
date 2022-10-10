@@ -1,12 +1,12 @@
 <template>
     <div class="push_right">
         <h1>Information</h1>
-        <p>ID : {{ user.id }} </p>
-        <p>Name : {{user.name}} </p>
-        <p>Lastname : {{user.lastname}}</p>
-        <p>Email : {{user.email}}</p>
-        <p>Password : {{user.password}}</p>
-        <p> 
+        <p class="fs-4 text">ID : {{ user.id }} </p>
+        <p class="fs-4 text">Name : {{user.name}} </p>
+        <p class="fs-4 text">Lastname : {{user.lastname}}</p>
+        <p class="fs-4 text">Email : {{user.email}}</p>
+        <p class="fs-4 text">Password : {{user.password}}</p>
+        <p class="fs-4 text"> 
             <button v-on:click="navigateTo('/user/edit/'+user.id)" class="btn btn-dark">EDIT</button>
             <button v-on:click="navigateTo('/users')" class="btn btn-dark"> BACK </button> 
         </p>
@@ -42,8 +42,8 @@ export default {
 
 <style scoped>
 .push_right{
-    margin-top: -270px;
-    margin-left: 470px;
+    margin-top: 80px;
+    margin-left: 20px;
 }
 .nv-navbar {
   background-color: #DCDCDC;
