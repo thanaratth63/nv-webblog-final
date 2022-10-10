@@ -15,9 +15,9 @@
 				/>
 			    </p>	
 		    <p>
-			  <button v-on:click="navigateTo('/blog/edit/' + blog.id)">Edit</button>
-			  <button v-on:click="deleteBlog(blog)"> Delete </button>
-			  <button v-on:click="navigateTo('/blogs')">Back</button>
+			  <button v-on:click="navigateTo('/blog/edit/' + blog.id)" class="btn-default">Edit</button>
+			  <button v-on:click="deleteBlog(blog)" class="btn-default"> Delete </button>
+			  <button v-on:click="navigateTo('/blogs')" class="btn-default">Back</button>
 		    </p>
         </form>
 	</div>
@@ -257,4 +257,7 @@ export default {
 .clearfix {
   clear: left;
 }
+.btn-default {
+      box-shadow: 1px 2px 5px #000000;   
+  }
 </style>

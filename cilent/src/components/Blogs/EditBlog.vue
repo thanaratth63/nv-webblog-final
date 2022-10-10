@@ -1,11 +1,11 @@
 <template>
 	<div>
-		<h1>แก้ไขข้อมูลหนังสือ</h1>
+		<h1>Edit </h1>
 		<form v-on:submit.prevent="editBlog">
-			<p>ชื่อเรื่อง: <input type="text" v-model="blog.title" /></p>
-            <p>ติดต่อ: <input type="text" v-model="blog.category" /></p>
-            <p>ราคา: <input type="text" v-model="blog.status" /> บาท</p>
-			<p><strong>รูปภาพ:</strong></p>
+			<p>Name : <input type="text" v-model="blog.title" /></p>
+            <p>Detail : <input type="text" v-model="blog.category" /></p>
+            <p>Price : <input type="text" v-model="blog.status" /> Bath </p>
+			<p><strong> Image :</strong></p>
 			<p>
 			    <vue-ckeditor
 					v-model.lazy="blog.content"
@@ -15,8 +15,8 @@
 				/>
 			</p>
 			<p>
-				<button type="submit">ตกลง</button>
-				<button v-on:click="navigateTo('/blogs')">กลับ</button>
+				<button type="submit" class="btn-default">OK</button>
+				<button v-on:click="navigateTo('/blogs')" class="btn-default">BACK</button>
 			</p>
 		</form>
 	</div>
@@ -183,4 +183,7 @@ export default {
 </script>
 
 <style scoped>
+.btn-default {
+      box-shadow: 1px 2px 5px #000000;   
+  }
 </style>

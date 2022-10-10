@@ -1,15 +1,15 @@
 <template>
 <div class="push_right">
     <div v-if="users.length">
-        <h1>ผู้ใช้งานระบบ</h1>
-        <h4>จำนวนผู้ใช้งาน {{users.length}}</h4>
-        <p><button v-on:click="navigateTo('/user/create')">เพิ่มผู้ใช้งาน</button></p>
+        <h1>Admin</h1>
+        <h4>Number of users {{users.length}}</h4>
+        <p><button v-on:click="navigateTo('/user/create')" class="btn-default">Add</button></p>
         <div v-for="user in users" v-bind:key="user.id">
             <p>Name : {{user.name}} </p>
             <p>Lastname : {{user.lastname}}</p>
             <p>
-                <button v-on:click="navigateTo('/user/'+user.id)">แสดงข้อมูล</button>
-                <button v-on:click="deleteUser(user)">ลบข้อมูล</button>
+                <button v-on:click="navigateTo('/user/'+user.id)" class="btn-default">Show more</button>
+                <button v-on:click="deleteUser(user)" class="btn-default">Delete</button>
             </p>
             <hr>
         </div>
@@ -104,4 +104,7 @@ export default {
 .clearfix {
   clear: left;
 }
+.btn-default {
+      box-shadow: 1px 2px 5px #000000;   
+  }
 </style>

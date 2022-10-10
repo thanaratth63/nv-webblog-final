@@ -6,9 +6,9 @@
         <div v-for="blog in blogs" v-bind:key="blog.id">
             <p>Name: {{ blog.title }} </p>
             <p>Detail: {{ blog.category }} </p>
-            <p>Price: {{ blog.status }} บาท</p>
+            <p>Price: {{ blog.status }} Bath</p>
             <p>
-              <button v-on:click="navigateTo('/blog/'+ blog.id)"> See more </button> 
+              <button v-on:click="navigateTo('/blog/'+ blog.id)" class="btn-default"> See more </button> 
             </p>
             <hr>
         </div>
@@ -123,4 +123,7 @@ export default {
 .clearfix {
   clear: left;
 }
+.btn-default {
+      box-shadow: 1px 2px 5px #000000;   
+  }
 </style>

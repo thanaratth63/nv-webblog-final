@@ -40,7 +40,7 @@
                 :src="BASE_URL + picture.name"
                 alt="picture image"
               />
-              <button v-on:click.prevent="delFile(picture)">Delete Image</button>
+              <button v-on:click.prevent="delFile(picture)" class="btn-default">Delete Image</button>
 			        <button v-on:click.prevent="useThumbnail(picture.name)">Reduce image size</button>
              <div class="highlight"><h5><p>**Click on the picture and drag it down to the bottom box.**</p></h5></div>
             </li>
@@ -56,8 +56,8 @@
           @focus="onFocus($event)"
         />
       </p>
-      <p><button type="submit">OK</button>
-      <button v-on:click="navigateTo('/comments')"> BACK </button></p>
+      <p><button type="submit" class="btn-default">OK</button>
+      <button v-on:click="navigateTo('/comments')" class="btn-default"> BACK </button></p>
     </form>
   </div>
 </template>
@@ -422,4 +422,7 @@ ul.pictures li img {
 .clearfix {
   clear: left;
 }
+.btn-default {
+      box-shadow: 1px 2px 5px #000000;   
+  }
 </style>

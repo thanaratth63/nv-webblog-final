@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div class="push_right">
         <h1> User Login </h1>
         <form v-on:submit.prevent="onLogin">
             <p>Username: <input type="text" v-model="email" /></p>
             <p>Password: <input type="password" v-model="password" /></p>
-            <p><button type="submit">Login </button></p>
+            <p><button type="submit" class="btn-default">Login </button></p>
             <dev class = "error" v-if="error">{{error}}</dev>
         </form>
     </div>
@@ -47,7 +47,46 @@ export default {
 </script>
 
 <style scoped>
+.push_right{
+    margin-top: -270px;
+    margin-left: 470px;
+}
+.nv-navbar {
+  background-color: #DCDCDC;
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+}
+.nv-navbar .nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+.nv-navbar .nav li {
+  float: left;
+}
+.nv-navbar .nav li a {
+  padding: 10px;
+  text-decoration: none;
+  color: #778890;
+  font-weight: bold;
+}
+.nv-navbar .nav li a:hover {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+.nv-navbar .nav li a.router-link-active {
+  background-color: #708090;
+  color: black;
+}
+.clearfix {
+  clear: left;
+}
 .error{
     color: red;
 }
+.btn-default {
+      box-shadow: 1px 2px 5px #000000;   
+  }
 </style>
