@@ -7,8 +7,8 @@
         <p>Email : <input type="text" v-model="user.email"></p>
         <p>Password : <input type="text" v-model="user.password"></p>
         <p>
-           <button type="submit" class="btn-default">OK</button>
-           <button v-on:click="navigateTo('/users')" class="btn-default"> BACK</button> </p>
+           <button type="submit" class="btn btn-dark">OK</button>
+           <button v-on:click="navigateTo('/users')" class="btn btn-dark"> BACK</button> </p>
     </form>
     <hr>
     <div>
@@ -92,7 +92,5 @@ export default {
 .clearfix {
   clear: left;
 }
-.btn-default {
-      box-shadow: 1px 2px 5px #000000;   
-  }
+
 </style>

@@ -2,13 +2,26 @@
     <div class = "push_right">
         <h2> All Product </h2>
         <!-- <p><button v-on:click="logout"> Logout </button></p> -->
-        <h4> Has product {{blogs.length}} </h4>
+        <h4> Has {{blogs.length}} product  </h4>
+        <div v-if="blogs.length === 0" class="empty-blog">
+         No have product
+        </div>
         <div v-for="blog in blogs" v-bind:key="blog.id">
             <p>Name: {{ blog.title }} </p>
             <p>Detail: {{ blog.category }} </p>
-            <p>Price: {{ blog.status }} Bath</p>
+            <p>Price: {{ blog.status }}</p>
+            <div class="blog-list">
+				<div class="blog-pic">
+					<transition name="fade"> 
+        				<div class="thumbnail-pic" v-if="blog.thumbnail != 'null'">
+        				  <img :src="BASE_URL+blog.thumbnail" alt="thumbnail" width="200">
+        				</div>
+      				</transition>
+				</div>
+			</div>
+            <br>
             <p>
-              <button v-on:click="navigateTo('/blog/'+ blog.id)" class="btn-default"> See more </button> 
+              <button v-on:click="navigateTo('/blog/'+ blog.id)" class="btn btn-dark"> See more </button> 
             </p>
             <hr>
         </div>
@@ -23,7 +36,8 @@ import CommentsService from '@/services/CommentsService'
 export default {
     data () {
         return { 
-            blogs: []
+            blogs: [],
+            BASE_URL: "http://localhost:8081/assets/uploads/"
         }
         return{
             comments: []
@@ -123,7 +137,12 @@ export default {
 .clearfix {
   clear: left;
 }
-.btn-default {
-      box-shadow: 1px 2px 5px #000000;   
-  }
+.empty-blog {
+ width: 100%;
+ height: 200%;
+ text-align: center;
+ padding:10px;
+ background:darksalmon;
+ color:white;
+}
 </style>

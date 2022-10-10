@@ -4,20 +4,28 @@
 		<form v-on:submit.prevent="editBlog">
 		    <p>Name: {{ blog.title }}</p>
 		    <p>Detail: {{ blog.category }}</p>
-		    <p>Price: {{ blog.status }} Bath</p>
-            <p>Image: {{ blog.content }}</p>
-			    <p>
-				    <vue-ckeditor
-					v-model.lazy="blog.content"
-					:config="config" 
-					@blur="onBlur($event)"
-					@focus="onFocus($event)"
-				/>
-			    </p>	
+		    <p>Price: {{ blog.status }} </p>
+            <p>Image: </p>
+	
+				<div class="blog-pic">
+					<transition name="fade"> 
+        				<div class="thumbnail-pic" v-if="blog.thumbnail != 'null'">
+        				  <img :src="BASE_URL+blog.thumbnail" alt="thumbnail">
+        				</div>
+      				</transition>
+				</div>
+				<br>
+			  	<br>
+				  <br>
+			  	<br>
+				  <br>
+			  	<br>
+				  <br>
+			  	<br>
 		    <p>
-			  <button v-on:click="navigateTo('/blog/edit/' + blog.id)" class="btn-default">Edit</button>
-			  <button v-on:click="deleteBlog(blog)" class="btn-default"> Delete </button>
-			  <button v-on:click="navigateTo('/blogs')" class="btn-default">Back</button>
+			  <button v-on:click="navigateTo('/blog/edit/' + blog.id)" class="btn btn-dark">Edit</button>
+			  <button v-on:click="deleteBlog(blog)" class="btn btn-dark"> Delete </button>
+			  <button v-on:click="navigateTo('/blogs')" class="btn btn-dark">Back</button>
 		    </p>
         </form>
 	</div>
@@ -30,6 +38,7 @@ import VueCkeditor from 'vue-ckeditor2'
 export default {
 	data() {
 		return {
+			BASE_URL: "http://localhost:8081/assets/uploads/",
 			blog: {
 				title: "",
 				thumbnail: "null",
@@ -150,7 +159,7 @@ export default {
 					{ name: "tools", items: ["Maximize", "ShowBlocks"] },
 					{ name: "about", items: ["About"] },
 				],
-				height: 300
+				height: 500
 			}
 		};
 	},
@@ -257,7 +266,31 @@ export default {
 .clearfix {
   clear: left;
 }
-.btn-default {
-      box-shadow: 1px 2px 5px #000000;   
-  }
+  .thumbnail-pic img{
+ width: 200px;
+ padding: 5px 10px 0px 0px;
+}
+.blog-info {
+ float: left;
+}
+.blog-pic {
+ float: left;
+}
+.clearfix {
+ clear: both;
+}
+.blog-list {
+ border:solid 1px #dfdfdf;
+ margin-bottom: 10px;
+ max-width: 900px;
+ margin-left: auto;
+ margin-right: auto;
+ padding: 5px;
+ ;
+}
+.blog-header {
+ max-width: 900px;
+ margin-left: auto;
+ margin-right: auto;
+}
 </style>

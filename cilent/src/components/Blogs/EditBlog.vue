@@ -1,10 +1,10 @@
 <template>
-	<div>
+	<div class="push_right">
 		<h1>Edit </h1>
 		<form v-on:submit.prevent="editBlog">
 			<p>Name : <input type="text" v-model="blog.title" /></p>
             <p>Detail : <input type="text" v-model="blog.category" /></p>
-            <p>Price : <input type="text" v-model="blog.status" /> Bath </p>
+            <p>Price : <input type="text" v-model="blog.status" /></p>
 			<p><strong> Image :</strong></p>
 			<p>
 			    <vue-ckeditor
@@ -15,8 +15,8 @@
 				/>
 			</p>
 			<p>
-				<button type="submit" class="btn-default">OK</button>
-				<button v-on:click="navigateTo('/blogs')" class="btn-default">BACK</button>
+				<button type="submit" class="btn btn-dark">OK</button>
+				<button v-on:click="navigateTo('/blogs')" class="btn btn-dark">BACK</button>
 			</p>
 		</form>
 	</div>
@@ -183,7 +183,9 @@ export default {
 </script>
 
 <style scoped>
-.btn-default {
-      box-shadow: 1px 2px 5px #000000;   
-  }
+.push_right{
+    margin-top: -270px;
+    margin-left: 470px;
+}
+
 </style>

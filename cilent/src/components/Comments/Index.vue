@@ -3,7 +3,7 @@
         <div  class = "push_right">
             <h2> Add Product</h2>
             <!-- <p><button v-on:click="logout"> Logout </button></p> -->
-            <h4><p><button v-on:click="navigateTo('/blog/create')" class="btn-default"> Add </button></p></h4>
+            <h4><p><button v-on:click="navigateTo('/blog/create')" class="btn btn-dark"> Add </button></p></h4>
             <div v-for="blog in blogs" v-bind:key="blog.id"></div>       
         </div>
     </div>
@@ -124,7 +124,5 @@ export default {
 .clearfix {
   clear: left;
 }
-.btn-default {
-      box-shadow: 1px 2px 5px #000000;   
-  }
+
 </style>

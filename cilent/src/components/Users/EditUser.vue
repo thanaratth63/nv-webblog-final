@@ -6,8 +6,8 @@
         <p>Lastname : <input type="text" v-model="user.lastname"></p>
         <p>Email : <input type="text" v-model="user.email"></p>
         <p>Password : <input type="text" v-model="user.password"></p>
-        <p><button type="submit" class="btn-default">OK</button>
-        <button v-on:click="navigateTo('/users')" class="btn-default"> BACK</button> </p>
+        <p><button type="submit" class="btn btn-dark">OK</button>
+        <button v-on:click="navigateTo('/users')" class="btn btn-dark"> BACK</button> </p>
     </form>
     <hr>
     <div>

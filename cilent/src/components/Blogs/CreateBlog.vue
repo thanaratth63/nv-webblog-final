@@ -10,7 +10,7 @@
 		    </div>
 	    </transition>
       <p>Detail: <input type="text" v-model="blog.category" /></p>
-      <p>Price: <input type="text" v-model="blog.status" /> Bath</p>
+      <p>Price: <input type="text" v-model="blog.status" /></p>
       <p><strong> Select Image :</strong></p>
       <form enctype="multipart/form-data" novalidate>
         <div class="dropbox">
@@ -40,8 +40,8 @@
                 :src="BASE_URL + picture.name"
                 alt="picture image"
               />
-              <button v-on:click.prevent="delFile(picture)" class="btn-default">Delete Image</button>
-			        <button v-on:click.prevent="useThumbnail(picture.name)">Reduce image size</button>
+              <button v-on:click.prevent="delFile(picture)" class="btn btn-dark">Delete Image</button>
+			        <button v-on:click.prevent="useThumbnail(picture.name)" class="btn btn-dark">Reduce image size</button>
              <div class="highlight"><h5><p>**Click on the picture and drag it down to the bottom box.**</p></h5></div>
             </li>
           </ul>
@@ -57,7 +57,7 @@
         />
       </p>
       <p><button type="submit" class="btn-default">OK</button>
-      <button v-on:click="navigateTo('/comments')" class="btn-default"> BACK </button></p>
+      <button v-on:click="navigateTo('/comments')" class="btn btn-dark"> BACK </button></p>
     </form>
   </div>
 </template>

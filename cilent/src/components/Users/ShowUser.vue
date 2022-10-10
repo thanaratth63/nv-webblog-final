@@ -7,8 +7,8 @@
         <p>Email : {{user.email}}</p>
         <p>Password : {{user.password}}</p>
         <p> 
-            <button v-on:click="navigateTo('/user/edit/'+user.id)" class="btn-default">EDIT</button>
-            <button v-on:click="navigateTo('/users')" class="btn-default"> BACK </button> 
+            <button v-on:click="navigateTo('/user/edit/'+user.id)" class="btn btn-dark">EDIT</button>
+            <button v-on:click="navigateTo('/users')" class="btn btn-dark"> BACK </button> 
         </p>
     </div>
 </template>
@@ -77,7 +77,5 @@ export default {
 .clearfix {
   clear: left;
 }
-.btn-default {
-      box-shadow: 1px 2px 5px #000000;   
-  }
+
 </style>

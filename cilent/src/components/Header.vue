@@ -8,22 +8,27 @@
           <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
     </head>
-<div class="container-fluid ">
-  <div class="row content ">
-    <div class="col-sm-3 sidenav">
-      <h1>GUCCI</h1>
-      <ul class="nav nav-pills nav-stacked " >
-      <li><router-link :to="{ name: 'blogs' }" class="btn btn-default" > Home </router-link></li>
-      <li><router-link :to="{ name: 'comments' }" class="btn btn-default"> Add Product</router-link></li>
-      <li><router-link :to="{ name: 'users' }" class="btn btn-default"> Users </router-link></li>
-      <li><router-link :to="{ name: 'login' }" class="btn btn-default"> Login </router-link></li>
-      <li><a v-on:click.prevent="logout" href="blogs" class="btn btn-default"> Logout </a></li>
-      </ul><br>
+  <div class="container">
+  <div class="row">
+    <div class="col">
+      <router-link :to="{ name: 'blogs' }" class="btn btn-dark" > Home </router-link>
     </div>
-
-  
+    <div class="col">
+      <router-link :to="{ name: 'comments' }" class="btn btn-dark"> Add Product</router-link>
+    </div>
+    <div class="col">
+      <router-link :to="{ name: 'users' }" class="btn btn-dark"> Users </router-link>
+    </div>
+    <div class="col">
+      <router-link :to="{ name: 'login' }" class="btn btn-dark"> Login </router-link>
+    </div>
+    <div class="col">
+      <a v-on:click.prevent="logout" href="blogs" class="btn btn-dark"> Logout </a>
+    </div>
   </div>
 </div>
+
+
 </div>
 
 </template>
@@ -77,12 +82,5 @@ export default {
 .clearfix {
   clear: left;
 }
-.btn-default {
-      background: #000;
-      color: #fff;
-   }
-  .btn-default:hover {
-      background: #fff;
-      color: #000;
-   }
+
 </style>
