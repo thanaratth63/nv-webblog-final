@@ -1,8 +1,8 @@
 const UserAuthenController = require('./controllers/UserAuthenController')
 const UserController = require('./controllers/UserController')
 const isAuthenController = require('./authen/isAuthenControllers')
-const BlogController = require('./controllers/BlogController')
-const Blog = require('./models/Blog.js');
+const gucciController = require('./controllers/gucciController')
+const gucci = require('./models/gucci.js');
 const CommentController = require('./controllers/CommentController')
 let multer = require("multer")
 
@@ -44,24 +44,24 @@ module.exports = (app) => {
     UserAuthenController.login
   )
   
-  app.post('/blog',
-    BlogController.create
+  app.post('/gucci',
+    gucciController.create
   )
 
-  app.put('/blog/:blogId',
-    BlogController.put
+  app.put('/gucci/:gucciId',
+    gucciController.put
   )
 
-  app.delete('/blog/:blogId',
-    BlogController.remove
+  app.delete('/gucci/:gucciId',
+    gucciController.remove
   )
 
-  app.get('/blog/:blogId',
-    BlogController.show
+  app.get('/gucci/:gucciId',
+    gucciController.show
   )
 
-  app.get('/blogs',
-    BlogController.index
+  app.get('/guccis',
+    gucciController.index
   )
   
   app.post('/comment',
