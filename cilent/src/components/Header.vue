@@ -12,7 +12,9 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="">GUCCI</a>
+      <a class="navbar-brand" href="">
+        <img src="@/assets/logo.png" alt="" width="24" height="24" class="d-inline-block align-text-top">
+        GUCCI</a>
     </div>
     <div class="col">
       <router-link :to="{ name: 'blogs' }" class="btn btn-dark" > Home </router-link>

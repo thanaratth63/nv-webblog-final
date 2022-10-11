@@ -119,7 +119,7 @@ export default {
  height: 200%;
  text-align: center;
  padding:10px;
- background:rgb(223, 185, 251);
+ background:rgb(246, 238, 251);
  color:rgb(0, 0, 0);
 }
 </style>
